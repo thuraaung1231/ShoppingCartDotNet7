@@ -1,0 +1,81 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ShoppingCartDotNet7.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ShoppingCartDotNet7.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\Boy1.jpg",
+      "PackagePath": "staticwebassets\\Boy1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ShoppingCartDotNet7.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.ShoppingCartDotNet7.props",
+      "PackagePath": "build\\ShoppingCartDotNet7.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.ShoppingCartDotNet7.props",
+      "PackagePath": "buildMultiTargeting\\ShoppingCartDotNet7.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.ShoppingCartDotNet7.props",
+      "PackagePath": "buildTransitive\\ShoppingCartDotNet7.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
