@@ -8,7 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.30" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShoppingCartDTO\ShoppingCartDTO.csproj" />
   </ItemGroup>
 
 </Project>
