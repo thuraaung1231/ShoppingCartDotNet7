@@ -1,0 +1,11 @@
+D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotNet7\ShoppingCartDTO\bin\Debug\net7.0\ShoppingCartDTO.deps.json
+D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotNet7\ShoppingCartDTO\bin\Debug\net7.0\ShoppingCartDTO.dll
+D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotNet7\ShoppingCartDTO\bin\Debug\net7.0\ShoppingCartDTO.pdb
+D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotNet7\ShoppingCartDTO\obj\Debug\net7.0\ShoppingCartDTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotNet7\ShoppingCartDTO\obj\Debug\net7.0\ShoppingCartDTO.AssemblyInfoInputs.cache
+D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotNet7\ShoppingCartDTO\obj\Debug\net7.0\ShoppingCartDTO.AssemblyInfo.cs
+D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotNet7\ShoppingCartDTO\obj\Debug\net7.0\ShoppingCartDTO.csproj.CoreCompileInputs.cache
+D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotNet7\ShoppingCartDTO\obj\Debug\net7.0\ShoppingCartDTO.dll
+D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotNet7\ShoppingCartDTO\obj\Debug\net7.0\refint\ShoppingCartDTO.dll
+D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotNet7\ShoppingCartDTO\obj\Debug\net7.0\ShoppingCartDTO.pdb
+D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotNet7\ShoppingCartDTO\obj\Debug\net7.0\ref\ShoppingCartDTO.dll
