@@ -1,19 +1,37 @@
 ﻿@inherits LayoutComponentBase
+@using MudBlazor
 
 <PageTitle>ShoppingCartDotNet7</PageTitle>
-
+  <MudThemeProvider />
+    <MudDialogProvider />
+    <MudSnackbarProvider />
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+   
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
+    <main class="bg-secondary">
+        <MudLayout>
+            <MudAppBar Elevation="4">
+                <MudText Typo="Typo.h5" Class="ml-3"><MudAvatar Size="Size.Large" Color="Color.Secondary" >SHOP</MudAvatar></MudText>
 
-        <article class="content px-4">
-            @Body
-        </article>
+           <MudSpacer></MudSpacer>
+
+                <MudTextField @bind-Value="searchString1" Placeholder="Search" AdornmentColor="Color.Secondary" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Variant="Variant.Filled" style="color: floralwhite;::placeholder { color: white; };" class="mb-2 p-0"></MudTextField>
+                 <MudSpacer></MudSpacer>
+                <MudBadge Content="100" Color="Color.Secondary" Overlap="true" Class="mx-10  ">
+                    <MudIcon Icon="@Icons.Material.Filled.Email" Color="Color.Default" />
+                </MudBadge>
+               <MudIconButton Variant="Variant.Filled" Color="Color.Secondary" Edge="Edge.End">Login</MudIconButton>
+            
+
+            </MudAppBar>
+            <MudMainContent Class="container mx-auto">
+                @Body
+            </MudMainContent>
+        </MudLayout>
+
+     
     </main>
 </div>
+@code{
+    private string searchString1 = "";
+}

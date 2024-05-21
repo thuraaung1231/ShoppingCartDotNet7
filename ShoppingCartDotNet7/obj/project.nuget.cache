@@ -1,8 +1,25 @@
 {
   "version": 2,
-  "dgSpecHash": "AKj5/rpuvmfnxgeBpEuCBoaoQALtteqTSGgKp7LKZIy/GYwHC7RYrXkU+GiiUwPtZRK7XcAiIm8n9IzzzwwToA==",
+  "dgSpecHash": "huCO5ZXbzz5vzs8n/1sHxdK5O3I8HgaEimZUM5YcfV1OjLRuBz6EFE1/x8QV6Yki70MNjL/gXStRbWUTHhJ7dw==",
   "success": true,
-  "projectFilePath": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.17\\microsoft.aspnetcore.authorization.7.0.17.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.17\\microsoft.aspnetcore.components.7.0.17.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\7.0.17\\microsoft.aspnetcore.components.analyzers.7.0.17.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\7.0.17\\microsoft.aspnetcore.components.forms.7.0.17.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.components.web\\7.0.17\\microsoft.aspnetcore.components.web.7.0.17.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.17\\microsoft.aspnetcore.metadata.7.0.17.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.localization\\7.0.17\\microsoft.extensions.localization.7.0.17.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.localization.abstractions\\7.0.17\\microsoft.extensions.localization.abstractions.7.0.17.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.jsinterop\\7.0.17\\microsoft.jsinterop.7.0.17.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\mudblazor\\6.19.1\\mudblazor.6.19.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
