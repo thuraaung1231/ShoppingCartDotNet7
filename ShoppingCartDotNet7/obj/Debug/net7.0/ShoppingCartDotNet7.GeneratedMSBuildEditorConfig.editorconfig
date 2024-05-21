@@ -9,49 +9,49 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ShoppingCartDotNet7
 build_property.RootNamespace = ShoppingCartDotNet7
-build_property.ProjectDir = C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\
+build_property.ProjectDir = D:\AllC#\C#Exercises\GitCollabration\ShoppingCartDotNet7\ShoppingCartDotNet7\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7
+build_property.MSBuildProjectDirectory = D:\AllC#\C#Exercises\GitCollabration\ShoppingCartDotNet7\ShoppingCartDotNet7
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/User/source/repos/ShoppingCartDotNet7/ShoppingCartDotNet7/App.razor]
+[D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartDotNet7/ShoppingCartDotNet7/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/source/repos/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/Counter.razor]
+[D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/source/repos/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/FetchData.razor]
+[D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/source/repos/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/Index.razor]
+[D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/source/repos/ShoppingCartDotNet7/ShoppingCartDotNet7/Shared/SurveyPrompt.razor]
+[D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartDotNet7/ShoppingCartDotNet7/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/source/repos/ShoppingCartDotNet7/ShoppingCartDotNet7/_Imports.razor]
+[D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartDotNet7/ShoppingCartDotNet7/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/source/repos/ShoppingCartDotNet7/ShoppingCartDotNet7/Shared/MainLayout.razor]
+[D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartDotNet7/ShoppingCartDotNet7/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-ykjtl45q6o
 
-[C:/Users/User/source/repos/ShoppingCartDotNet7/ShoppingCartDotNet7/Shared/NavMenu.razor]
+[D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartDotNet7/ShoppingCartDotNet7/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-mc3trwh66r
 
-[C:/Users/User/source/repos/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/Error.cshtml]
+[D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/source/repos/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/_Host.cshtml]
+[D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
