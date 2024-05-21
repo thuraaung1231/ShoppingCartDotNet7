@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ShoppingCartDotNet7.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\Boy1.jpg",
+      "PackagePath": "staticwebassets\\Boy1.jpg"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },

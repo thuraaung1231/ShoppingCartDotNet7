@@ -29,3 +29,16 @@ C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\obj\Debug\net
 C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\obj\Debug\net7.0\ShoppingCartDotNet7.pdb
 C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\obj\Debug\net7.0\ShoppingCartDotNet7.genruntimeconfig.cache
 C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\obj\Debug\net7.0\ref\ShoppingCartDotNet7.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\Microsoft.Extensions.Localization.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\Microsoft.JSInterop.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\MudBlazor.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\obj\Debug\net7.0\ShoppingCartDotNet7.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\obj\Debug\net7.0\ShoppingCartDotNet7.csproj.CopyComplete
