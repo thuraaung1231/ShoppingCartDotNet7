@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj": {}
+    "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj": {}
   },
   "projects": {
-    "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj": {
+    "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj",
+        "projectUniqueName": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj",
         "projectName": "ShoppingCartDotNet7",
-        "projectPath": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj",
+        "projectPath": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj",
         "packagesPath": "C:\\Users\\itstu\\.nuget\\packages\\",
-        "outputPath": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\obj\\",
+        "outputPath": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
