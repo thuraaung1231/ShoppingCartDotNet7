@@ -1,5 +1,76 @@
-﻿<h3>Login</h3>
+﻿@page "/LoginUser"
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
+@using System.ComponentModel.DataAnnotations
+@using MudBlazor
+@using Newtonsoft.Json
+@inject NavigationManager navigate
+@inject IAPIRoute ApiRoute
+@inject ProtectedSessionStorage protectedSessionStore
 
-@code {
+<EditForm Model="@loginModel" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+    <MudGrid>
+        <MudItem xs="12" sm="5" Class="mx-auto">
+            <MudCard Class="py-5 px-3">
+                <MudCardContent>
+                    <MudText Align="Align.Center" Class="mb-n4 fs-4">Login Here!</MudText>
+                    <MudTextField Label="Name"
+                    @bind-Value="loginModel.Name" For="@(() => loginModel.Name)" />
+                    
+                    <MudTextField Label="Password" HelperText="Choose a strong password" Class="mt-3"
+                    @bind-Value="loginModel.Password" For="@(() => loginModel.Password)" InputType="InputType.Password" />
+                    
+                </MudCardContent>
+                <a href="#" class="m-3 fst-italic text-decoration-underline text-primary">Create New Account?</a>
+                <MudCardActions Class="d-flex justify-content-center">
+                    
+                    <MudButton ButtonType="ButtonType.Submit" FullWidth Variant="Variant.Filled" Color="Color.Primary" @onclick="LoginUser">Login</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
 
+    </MudGrid>
+</EditForm>
+
+
+ @code {
+    ResponseModel responseModel = new ResponseModel();
+    LoginModel loginModel = new LoginModel();
+    UserModel userModel = new UserModel();
+    bool success;
+    private void OnValidSubmit(EditContext context)
+    {
+        success = true;
+        StateHasChanged();
+    }
+    private async void LoginUser()
+    {
+        responseModel = await ApiRoute.GetUserByNameAndPassword(loginModel);
+
+
+        if (responseModel.ResCode == "I001")
+        {
+            userModel = JsonConvert.DeserializeObject<UserModel>(responseModel.ResData.ToString());
+            protectedSessionStore.SetAsync("UserRole", userModel);
+
+            if (userModel.RoleId == 0 || userModel.RoleId==1)
+            {
+                navigate.NavigateTo("AdminDashboard");
+            }
+            else
+            {
+                
+                navigate.NavigateTo("Home");
+            }
+            
+        }
+        else
+        {
+            navigate.NavigateTo("LoginUser");
+        }
+
+    }
 }
+
+
+

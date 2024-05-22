@@ -10,5 +10,6 @@ namespace ShoppingCartApi.Services.StudentServices
         ResponseModel DeleteUser(int id);
         ResponseModel GetUser(int id);
         ResponseModel GetUserList();
+        ResponseModel GetUserByNameAndPassword(LoginModel loginModel);
     }
 }

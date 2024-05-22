@@ -59,5 +59,13 @@ namespace ShoppingCartApi.Controllers
             responseModel= _userService.DeleteUser(id);
             return Task.FromResult(responseModel);
         }
+        [HttpPost]
+        [Route("GetUserByNameAndPassword")]
+        public Task<ResponseModel> GetUserByNameAndPassword(LoginModel loginModel)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            responseModel = _userService.GetUserByNameAndPassword(loginModel);
+            return Task.FromResult(responseModel);
+        }
     }
 }
