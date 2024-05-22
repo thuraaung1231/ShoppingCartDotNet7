@@ -1,6 +1,15 @@
-﻿@page "/Admin"
+﻿@page "/AdminDashboard"
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
+@using Microsoft.AspNetCore.Http
+@inject ProtectedSessionStorage protectedSessionStore
+
 <h3>Admin</h3>
-
+<h4>@userModel.Name</h4>
 @code {
-
+    UserModel userModel = new UserModel();
+    protected override async Task OnInitializedAsync()
+    {
+        var result =await protectedSessionStore.GetAsync<UserModel>("UserRole");
+        userModel = result.Value;
+    }
 }

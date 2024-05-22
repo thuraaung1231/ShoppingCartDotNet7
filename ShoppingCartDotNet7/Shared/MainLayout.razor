@@ -1,26 +1,36 @@
 ﻿@inherits LayoutComponentBase
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 @using MudBlazor
+@inject ProtectedSessionStorage protectedSessionStore
+@using Newtonsoft.Json
 
 <PageTitle>ShoppingCartDotNet7</PageTitle>
   <MudThemeProvider />
     <MudDialogProvider />
     <MudSnackbarProvider />
 <div class="page">
-   
 
-    <main class="bg-secondary">
-        <MudLayout>
-            <MudAppBar Elevation="4">
-                <MudText Typo="Typo.h5" Class="ml-3"><MudAvatar Size="Size.Large" Color="Color.Secondary" >SHOP</MudAvatar></MudText>
+    @* @if (userModel != null && (userModel.RoleId == 0 || userModel.RoleId == 1))
+    {
+    <div class="sidebar">
+    <NavMenu />
+    </div>
+    } *@
+    
+    <main class="bg-secondary vh-100">
+        <MudLayout >
+            <MudAppBar Elevation="4" Class="bg-primary">
+                <MudText Typo="Typo.h6" Color="Color.Warning" Class="ml-3">Shopping Cart <i class="fa-solid fa-basket-shopping"></i></MudText>
 
-           <MudSpacer></MudSpacer>
-
-                <MudTextField @bind-Value="searchString1" Placeholder="Search" AdornmentColor="Color.Secondary" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Variant="Variant.Filled" style="color: floralwhite;::placeholder { color: white; };" class="mb-2 p-0"></MudTextField>
+                   <MudSpacer></MudSpacer>
+              
+                <MudTextField @bind-Value="searchString1" Class="mud-info" Variant="Variant.Outlined" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Search" AdornmentColor="Color.Secondary" />
                  <MudSpacer></MudSpacer>
-                <MudBadge Content="100" Color="Color.Secondary" Overlap="true" Class="mx-10  ">
+               @*  <MudBadge Content="100" Color="Color.Secondary" Overlap="true" Class="mx-10  ">
                     <MudIcon Icon="@Icons.Material.Filled.Email" Color="Color.Default" />
-                </MudBadge>
-               <MudIconButton Variant="Variant.Filled" Color="Color.Secondary" Edge="Edge.End">Login</MudIconButton>
+                </MudBadge> *@
+                <MudIconButton Variant="Variant.Filled" Color="Color.Warning" Class="me-3">Login <i class="fa-solid fa-right-to-bracket"></i></MudIconButton>
+                <MudIconButton Variant="Variant.Filled" Color="Color.Warning" Edge="Edge.End">Register <i class="fa-solid fa-user-plus"></i></MudIconButton>
             
 
             </MudAppBar>
@@ -33,5 +43,19 @@
     </main>
 </div>
 @code{
+    UserModel userModel = new UserModel();
     private string searchString1 = "";
+    private bool isInitialized;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && !isInitialized)
+        {
+            var user = await protectedSessionStore.GetAsync<UserModel>("UserRole");
+            userModel = user.Value;
+            isInitialized = true;
+            StateHasChanged(); // Re-render the component to reflect the loaded data
+        }
+    }
+}
 }
