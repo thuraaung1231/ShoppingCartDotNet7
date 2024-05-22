@@ -103,5 +103,20 @@ namespace ShoppingCartApi.Services.StudentServices
             return responseModel;
 
         }
+        public ResponseModel GetUserByNameAndPassword(LoginModel loginModel)
+        {
+            ResponseModel responseModel = new ResponseModel();
+            var user = _applicationDbContext.User.Where(u => u.Name == loginModel.Name && u.Password == loginModel.Password && u.Is_delete == false).FirstOrDefault();
+            if (user != null)
+            {
+                responseModel.ResData = user;
+                responseModel.ResCode = "I001";
+            }
+            else
+            {
+                responseModel.ResCode = "I002";
+            }
+            return responseModel;
+        }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CzGu/LTqbJ0DKNdz/ZWiaPc5R5TLWd5bVY39cxlatBU=",
+  "Hash": "xgDRlEt8ah0+aXtinMCGYeYKzEeLzUtnFEWK/giZdhQ=",
   "Source": "ShoppingCartDotNet7",
   "BasePath": "_content/ShoppingCartDotNet7",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ShoppingCartDotNet7\\wwwroot",
       "Source": "ShoppingCartDotNet7",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
       "BasePath": "_content/ShoppingCartDotNet7",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\User\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\MudBlazor.min.css",
+      "Identity": "C:\\Users\\itstu\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\MudBlazor.min.css",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\User\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\itstu\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\MudBlazor.min.css"
+      "OriginalItemSpec": "C:\\Users\\itstu\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\MudBlazor.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\MudBlazor.min.js",
+      "Identity": "C:\\Users\\itstu\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\MudBlazor.min.js",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\User\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\itstu\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.js",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\MudBlazor.min.js"
+      "OriginalItemSpec": "C:\\Users\\itstu\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\MudBlazor.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\obj\\Debug\\net7.0\\scopedcss\\bundle\\ShoppingCartDotNet7.styles.css",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\obj\\Debug\\net7.0\\scopedcss\\bundle\\ShoppingCartDotNet7.styles.css",
       "SourceId": "ShoppingCartDotNet7",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/ShoppingCartDotNet7",
       "RelativePath": "ShoppingCartDotNet7.styles.css",
       "AssetKind": "All",
@@ -65,13 +65,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\obj\\Debug\\net7.0\\scopedcss\\bundle\\ShoppingCartDotNet7.styles.css"
+      "OriginalItemSpec": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\obj\\Debug\\net7.0\\scopedcss\\bundle\\ShoppingCartDotNet7.styles.css"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ShoppingCartDotNet7.bundle.scp.css",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ShoppingCartDotNet7.bundle.scp.css",
       "SourceId": "ShoppingCartDotNet7",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/ShoppingCartDotNet7",
       "RelativePath": "ShoppingCartDotNet7.bundle.scp.css",
       "AssetKind": "All",
@@ -82,13 +82,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ShoppingCartDotNet7.bundle.scp.css"
+      "OriginalItemSpec": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ShoppingCartDotNet7.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\Boy1.jpg",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\Boy1.jpg",
       "SourceId": "ShoppingCartDotNet7",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
       "BasePath": "_content/ShoppingCartDotNet7",
       "RelativePath": "Boy1.jpg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\Boy1.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "ShoppingCartDotNet7",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
       "BasePath": "_content/ShoppingCartDotNet7",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "ShoppingCartDotNet7",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
       "BasePath": "_content/ShoppingCartDotNet7",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "ShoppingCartDotNet7",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
       "BasePath": "_content/ShoppingCartDotNet7",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "ShoppingCartDotNet7",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
       "BasePath": "_content/ShoppingCartDotNet7",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "ShoppingCartDotNet7",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
       "BasePath": "_content/ShoppingCartDotNet7",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "ShoppingCartDotNet7",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
       "BasePath": "_content/ShoppingCartDotNet7",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "ShoppingCartDotNet7",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
       "BasePath": "_content/ShoppingCartDotNet7",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "ShoppingCartDotNet7",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
       "BasePath": "_content/ShoppingCartDotNet7",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "ShoppingCartDotNet7",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
       "BasePath": "_content/ShoppingCartDotNet7",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "ShoppingCartDotNet7",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
       "BasePath": "_content/ShoppingCartDotNet7",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "ShoppingCartDotNet7",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
       "BasePath": "_content/ShoppingCartDotNet7",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\site.css",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\css\\site.css",
       "SourceId": "ShoppingCartDotNet7",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
       "BasePath": "_content/ShoppingCartDotNet7",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\favicon.png",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\favicon.png",
       "SourceId": "ShoppingCartDotNet7",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\wwwroot\\",
       "BasePath": "_content/ShoppingCartDotNet7",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
