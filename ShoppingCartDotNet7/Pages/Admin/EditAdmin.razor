@@ -1,5 +1,69 @@
-﻿<h3>EditAdmin</h3>
+﻿@page "/EditAdmin/{id:int}"
+@using System.ComponentModel.DataAnnotations
+@using Newtonsoft.Json
+@inject NavigationManager navigate
+@inject IAPIRoute ApiRoute
+<EditForm Model="@userModel" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+    <MudGrid Class="mt-5">
+        <MudItem xs="12" sm="6" Class="mx-auto">
+            <MudCard>
+                <MudCardContent>
+                    <MudText Align="Align.Center" Class="mb-n4 fs-4">Create Admin</MudText>
+                    <MudTextField Label="Name"
+                    @bind-Value="userModel.Name" For="@(() => userModel.Name)" />
+                    <MudTextField Label="Email" Class="mt-3"
+                    @bind-Value="userModel.Email" For="@(() => userModel.Email)" />
+                    <MudTextField Label="Address"
+                    @bind-Value="userModel.Address" For="@(() => userModel.Address)" />
+                    <MudTextField Label="Password" HelperText="Choose a strong password" Class="mt-3"
+                    @bind-Value="userModel.Password" For="@(() => userModel.Password)" InputType="InputType.Password" />
+                    <MudTextField Label="Confirm Password" HelperText="Repeat the password" Class="mt-3"
+                    @bind-Value="userModel.ConfirmPassword" For="@(() => userModel.ConfirmPassword)" InputType="InputType.Password" />
+                </MudCardContent>
+                <MudCardActions Class="d-flex justify-content-end">
+                    <MudButton ButtonType="ButtonType.Reset" Variant="Variant.Filled" Class="me-3">Cancel</MudButton>
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" @onclick="AdminRegister">Update</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+
+    </MudGrid>
+</EditForm>
+
 
 @code {
+    [Parameter]
+    public int id { get; set; }
 
+    ResponseModel responseModel = new ResponseModel();
+    UserModel userModel = new UserModel();
+    bool success;
+    protected override async Task OnInitializedAsync()
+    {
+        responseModel = await ApiRoute.GetUserById(id);
+        userModel = JsonConvert.DeserializeObject<UserModel>(responseModel.ResData.ToString());
+
+
+    }
+    private void OnValidSubmit(EditContext context)
+    {
+        success = true;
+        StateHasChanged();
+    }
+    private async void AdminRegister()
+    {
+        userModel.UpdatedAt = DateTime.Now;
+        userModel.ConfirmPassword = userModel.Password;
+        responseModel = await ApiRoute.UpdateUser(userModel);
+        if (responseModel.ResCode == "I001")
+        {
+            navigate.NavigateTo("AdminList");
+
+        }
+        else
+        {
+            navigate.NavigateTo("AdminList");
+        }
+    }
 }

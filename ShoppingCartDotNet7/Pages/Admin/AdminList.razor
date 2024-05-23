@@ -1,40 +1,36 @@
-﻿@page "/UserList"
-@using System.Net.Http.Json
-@inject HttpClient httpClient
-@using MudBlazor
-@inject IAPIRoute ApiRoute
-@using Newtonsoft.Json
+﻿@page "/AdminList"
 @inject NavigationManager navigate
-
-<MudDataGrid T="UserModel" MultiSelection="true" Items="@UserList" SortMode="SortMode.Multiple" Filterable="true" QuickFilter="@_quickFilter"
-    Hideable="true" RowClick="@RowClicked" RowContextMenuClick="RowRightClicked" SelectedItemsChanged="@SelectedItemsChanged">
+@using Newtonsoft.Json
+@inject IAPIRoute ApiRoute
+<MudDataGrid T="UserModel" MultiSelection="true" Items="@Admins" SortMode="SortMode.Multiple" Filterable="true" QuickFilter="@_quickFilter"
+             Hideable="true" RowClick="@RowClicked" RowContextMenuClick="RowRightClicked" SelectedItemsChanged="@SelectedItemsChanged">
     <ToolBarContent>
         <MudText Typo="Typo.h6">Periodic Elements</MudText>
         <MudSpacer />
         <MudTextField @bind-Value="_searchString" Placeholder="Search" Adornment="Adornment.Start" Immediate="true"
-            AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+                      AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
     </ToolBarContent>
     <Columns>
         <SelectColumn T="UserModel" />
         <PropertyColumn Property="x => x.Id" Title="Nr" Sortable="false" Filterable="false" />
         <PropertyColumn Property="x => x.Name" SortBy="@_sortBy" />
         <PropertyColumn Property="x => x.Email" />
-       
+
         <PropertyColumn Property="x => x.Address" />
         <TemplateColumn Filterable="false" Title="Edit" Class="mx-auto">
             <CellTemplate Context="context">
-                <MudButton Variant="Variant.Filled" Color="Color.Tertiary" @onclick="(() => EditUser(context.Item.Id))">
+                <MudButton Variant="Variant.Filled" Color="Color.Tertiary" @onclick="(() => AdminEdit(context.Item.Id))">
                     <i class="fa-solid fa-pen-to-square me-1"></i>edit
                 </MudButton>
             </CellTemplate>
         </TemplateColumn>
         <TemplateColumn Filterable="false" Title="Delete" Class="mx-auto">
             <CellTemplate Context="context">
-                <MudButton Variant="Variant.Filled" Color="Color.Error" @onclick="(()=>DeleteUser(context.Item.Id))" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash me-1"></i>delete</MudButton>
+                <MudButton Variant="Variant.Filled" Color="Color.Error" @onclick="(()=>DeleteAdmin(context.Item.Id))" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash me-1"></i>delete</MudButton>
 
             </CellTemplate>
         </TemplateColumn>
-      
+
     </Columns>
     <PagerContent>
         <MudDataGridPager T="UserModel" />
@@ -54,28 +50,26 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @onclick="()=>DeleteConfirm(userId)">Delete</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @onclick="()=>DeleteConfirm(AdminId)">Delete</button>
             </div>
         </div>
     </div>
 </div>
-
-@code {
-    List<UserModel> UserList = new List<UserModel>();
+@code{
+    List<UserModel>Admins=new List<UserModel>();
     ResponseModel responseModel = new ResponseModel();
     public string Message;
     private string _searchString;
-    public int userId;
+    public int AdminId;
     private bool _sortNameByLength;
     private List<string> _events = new();
-    // custom sort by name length
     private Func<UserModel, object> _sortBy => x =>
-    {
-        if (_sortNameByLength)
-            return x.Name.Length;
-        else
-            return x.Name;
-    };
+        {
+            if (_sortNameByLength)
+                return x.Name.Length;
+            else
+                return x.Name;
+        };
     // quick filter - filter globally across multiple columns with the same input
     private Func<UserModel, bool> _quickFilter => x =>
     {
@@ -96,14 +90,14 @@
 
     protected override async Task OnInitializedAsync()
     {
-        responseModel = await ApiRoute.GetUserList();
+        responseModel = await ApiRoute.GetAdminList();
         if (responseModel.ResCode == "I001")
         {
-            UserList = JsonConvert.DeserializeObject<List<UserModel>>(responseModel.ResData.ToString());
+            Admins = JsonConvert.DeserializeObject<List<UserModel>>(responseModel.ResData.ToString());
         }
         else
         {
-            Message = "Failed to get User List";
+            Message = "Failed to get Admin List";
         }
     }
 
@@ -123,26 +117,20 @@
         _events.Insert(0, $"Event = SelectedItemsChanged, Data = {System.Text.Json.JsonSerializer.Serialize(items)}");
     }
 
-
-
-    private void DeleteUser(int id)
+    private async void AdminEdit(int id)
     {
-        userId = id;
+        navigate.NavigateTo($"EditAdmin/{id}");
+    }
+    private async void DeleteAdmin(int id)
+    {
+        AdminId = id;
     }
     private async void DeleteConfirm(int id)
     {
         responseModel = await ApiRoute.DeleteUser(id);
         if (responseModel.ResCode == "I001")
         {
-
             navigate.NavigateTo(navigate.Uri, forceLoad: true);
         }
-
-
-        navigate.NavigateTo("UserList");
-    }
-    private async void EditUser(int id)
-    {
-        navigate.NavigateTo($"EditUser/{id}");
     }
 }

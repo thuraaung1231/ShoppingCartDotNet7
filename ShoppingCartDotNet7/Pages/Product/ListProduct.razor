@@ -1,4 +1,4 @@
-﻿@page "/ListProduct"
+﻿@page "/ProductList"
 @using MudBlazor
 @inject NavigationManager navigate
 
@@ -126,7 +126,7 @@
     {
         try
         {
-            responseData = await ApiService.ProductList();
+            responseData = await ApiService.GetProductList();
              //string JsonData = JsonConvert.SerializeObject(responseData.ResData);
             Elements = JsonConvert.DeserializeObject<List<ProductModel>>(responseData.ResData.ToString());
 
