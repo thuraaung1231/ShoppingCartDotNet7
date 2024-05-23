@@ -1,11 +1,11 @@
-﻿@page "/CreateUser"
+﻿@page "/CreateAdmin"
 @using System.ComponentModel.DataAnnotations
 @using MudBlazor
 @inject NavigationManager navigate
 @inject IAPIRoute ApiRoute
 <EditForm Model="@userModel" OnValidSubmit="OnValidSubmit">
 <DataAnnotationsValidator/>
-<MudGrid>
+<MudGrid Class="mt-5">
     <MudItem xs="12" sm="6" Class="mx-auto">
         <MudCard>
             <MudCardContent>
@@ -54,7 +54,7 @@
         }
         else
         {
-            navigate.NavigateTo("CreateUser");
+            navigate.NavigateTo("CreateAdmin");
         }
     }
 }

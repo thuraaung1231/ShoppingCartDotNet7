@@ -1,0 +1,97 @@
+﻿@page "/EditProduct/{id:int}"
+@using ShoppingCartDTO.Product
+@using System.ComponentModel.DataAnnotations
+@inject NavigationManager Navigate
+@using MudBlazor
+@inject IAPIRoute ApiService;
+@using Newtonsoft.Json
+
+<EditForm Model="@productModel" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+    <MudGrid>
+        <MudItem xs="12" sm="7" Class="mx-auto">
+            <MudCard>
+                <MudCardContent>
+                    <MudText Align="Align.Center" Class="mb-4 fs-4">Edit Product</MudText>
+                    @if (files != null)
+                    {
+                        <MudImage Src="@("/Images/" + files.Name)" Class="w-25"></MudImage>
+
+                    }
+                    else
+                    {
+                        <MudImage Src="@("/Images/" + productModel.Image)" Class="w-25"></MudImage>
+                    }
+                    <MudTextField Label="Name" HelperText="Product Name"
+                    @bind-Value="productModel.Name" For="@(() => productModel.Name)" />
+                    <MudTextField Label="Price" Class="mt-3" HelperText="Price"
+                    @bind-Value="productModel.Price" For="@(() => productModel.Price)" />
+                    <MudTextField Label="Total Item" HelperText="Total Item"
+                    @bind-Value="productModel.TotalItem" For="@(() => productModel.TotalItem)" />
+                    <MudTextField Label="Description" HelperText="Description"
+                    @bind-Value="productModel.Description" For="@(() => productModel.Description)" />
+                    <MudFileUpload T="IBrowserFile" FilesChanged="UploadFiles">
+                        <ButtonTemplate Context="UploadContext">
+                            <MudButton HtmlTag="label"
+                                       Variant="Variant.Filled"
+                                       Color="Color.Primary"
+                                       StartIcon="@Icons.Material.Filled.CloudUpload"
+                                       for="@UploadContext.Id">
+                                Upload product Cover
+                            </MudButton>
+                        </ButtonTemplate>
+                    </MudFileUpload>
+                    </MudCardContent>
+                <MudCardActions>
+                    <MudButton ButtonType="ButtonType.Reset" Variant="Variant.Filled" Class="d-inline-flex ms-auto" Color="Color.Dark">Cancel</MudButton>
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ms-2 d-inline-flex" @onclick="@UpdateProduct">Update Product</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+
+    </MudGrid>
+</EditForm>
+@code {
+    [Parameter]
+    public int id { get; set; }
+    ProductModel productModel = new ProductModel();
+    ResponseModel responseBookModel = new ResponseModel();
+    ResponseModel responseAuthorModel = new ResponseModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+        responseBookModel = await ApiService.GetByProductId(id);
+        productModel = JsonConvert.DeserializeObject<ProductModel>(responseBookModel.ResData.ToString());
+      
+    }
+
+    bool success;
+    IBrowserFile files;
+
+    private void OnValidSubmit(EditContext context)
+    {
+        success = true;
+        StateHasChanged();
+    }
+
+    private async Task UpdateProduct()
+    {
+
+        responseBookModel = await ApiService.UpdateProduct(productModel);
+        if (responseBookModel.ResCode == "I001")
+        {
+            Navigate.NavigateTo("ListProduct");
+        }
+        else
+        {
+            Navigate.NavigateTo("EditProduct");
+        }
+    }
+    private void UploadFiles(IBrowserFile file)
+    {
+        files = file;
+
+        productModel.Image = files.Name;
+
+    }
+}

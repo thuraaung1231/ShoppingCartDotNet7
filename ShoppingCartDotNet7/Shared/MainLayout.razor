@@ -3,59 +3,93 @@
 @using MudBlazor
 @inject ProtectedSessionStorage protectedSessionStore
 @using Newtonsoft.Json
+@using ShoppingCartDotNet7.Components
 
 <PageTitle>ShoppingCartDotNet7</PageTitle>
-  <MudThemeProvider />
-    <MudDialogProvider />
-    <MudSnackbarProvider />
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
 <div class="page">
 
-    @* @if (userModel != null && (userModel.RoleId == 0 || userModel.RoleId == 1))
+    @if (userModel != null && (userModel.RoleId == 0 || userModel.RoleId == 1))
     {
-    <div class="sidebar">
-    <NavMenu />
-    </div>
-    } *@
-    
+        <div class="sidebar">
+            <NavMenu />
+        </div>
+    }
+
     <main class="bg-secondary vh-100">
-        <MudLayout >
-            <MudAppBar Elevation="4" Class="bg-primary">
-                <MudText Typo="Typo.h6" Color="Color.Warning" Class="ml-3">Shopping Cart <i class="fa-solid fa-basket-shopping"></i></MudText>
-
-                   <MudSpacer></MudSpacer>
-              
-                <MudTextField @bind-Value="searchString1" Class="mud-info" Variant="Variant.Outlined" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Search" AdornmentColor="Color.Secondary" />
-                 <MudSpacer></MudSpacer>
-               @*  <MudBadge Content="100" Color="Color.Secondary" Overlap="true" Class="mx-10  ">
-                    <MudIcon Icon="@Icons.Material.Filled.Email" Color="Color.Default" />
-                </MudBadge> *@
-                <MudIconButton Variant="Variant.Filled" Color="Color.Warning" Class="me-3">Login <i class="fa-solid fa-right-to-bracket"></i></MudIconButton>
-                <MudIconButton Variant="Variant.Filled" Color="Color.Warning" Edge="Edge.End">Register <i class="fa-solid fa-user-plus"></i></MudIconButton>
+        <MudLayout>
+            @{
+                if (userModel.RoleId == 0)
+                {
+                    <HeaderComponent ActionName1="CreateAdmin" ActionName2="Logout" Icon1="fa-solid fa-plus" Icon2="fa-solid fa-right-from-bracket" Icon3="fa-solid fa-list" ActionName3="AdminList" Color1="Color.Warning"></HeaderComponent>
+                }
+                else if(userModel.RoleId==1)
+                {
+                    <HeaderComponent ActionName1="@userModel.Name" ActionName2="Logout" Icon2="fa-solid fa-right-from-bracket"></HeaderComponent>
+                }else if (userModel.RoleId == 2)
+                {
+                     <HeaderComponent ActionName1="@userModel.Name" ActionName2="Logout" Icon2="fa-solid fa-right-from-bracket" ></HeaderComponent>
+                }
+                else
+                {
+                    <HeaderComponent ActionName1="Login" ActionName2="Register" Icon2="fa-solid fa-plus" Icon1="fa-solid fa-right-from-bracket"></HeaderComponent>
+                    
+                }
+            }
             
-
-            </MudAppBar>
             <MudMainContent Class="container mx-auto">
                 @Body
             </MudMainContent>
         </MudLayout>
 
-     
+
     </main>
 </div>
-@code{
+@code {
     UserModel userModel = new UserModel();
-    private string searchString1 = "";
-    private bool isInitialized;
+    public string searchString1 = "";
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender && !isInitialized)
+        if (firstRender)
         {
-            var user = await protectedSessionStore.GetAsync<UserModel>("UserRole");
-            userModel = user.Value;
-            isInitialized = true;
-            StateHasChanged(); // Re-render the component to reflect the loaded data
+            await LoadUserData();
         }
+        else
+        {
+            await UpdateUserData();
+        }
+        
     }
+    private async Task LoadUserData()
+    {
+        var result = await protectedSessionStore.GetAsync<UserModel>("UserRole");
+        if (result.Success)
+        {
+            userModel = result.Value;
+        }
+        else
+        {
+            userModel.RoleId = 4;
+        }
+        StateHasChanged();
+    }
+
+    private async Task UpdateUserData()
+    {
+        var result = await protectedSessionStore.GetAsync<UserModel>("UserRole");
+        if (result.Success)
+        {
+            userModel = result.Value;
+        }
+        else
+        {
+            userModel.RoleId = 4;
+        }
+        StateHasChanged();
+    }
+
 }
-}
+

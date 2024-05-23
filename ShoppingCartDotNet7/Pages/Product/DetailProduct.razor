@@ -1,0 +1,72 @@
+﻿
+    @page "/DetailProduct/{id:int}"
+    @using ShoppingCartDTO.Product
+    @using System.ComponentModel.DataAnnotations
+    @inject NavigationManager Navigate
+    @using MudBlazor
+    @inject IAPIRoute ApiService;
+    @using Newtonsoft.Json
+
+    <EditForm Model="@productModel" OnValidSubmit="OnValidSubmit">
+        <DataAnnotationsValidator />
+        <MudGrid>
+            <MudItem xs="12" sm="7" Class="mx-auto">
+                <MudCard>
+                    <MudCardContent>
+                        <MudText Align="Align.Center" Class="mb-4 fs-4">Detail Product</MudText>
+                        @if (files != null)
+                        {
+                            <MudImage Src="@("/Images/" + files.Name)" Class="w-25"></MudImage>
+
+                        }
+                        else
+                        {
+                            <MudImage Src="@("/Images/" + productModel.Image)" Class="w-25"></MudImage>
+                        }
+                        
+                    <MudTextField Label="Name" 
+                    @bind-Value="productModel.Name" For="@(() => productModel.Name)" Disabled="true" />
+                        <MudTextField Label="Price" Class="mt-3" 
+                    @bind-Value="productModel.Price" For="@(() => productModel.Price)" Disabled="true" />
+                        <MudTextField Label="Total Item" 
+                    @bind-Value="productModel.TotalItem" For="@(() => productModel.TotalItem)" Disabled="true" />
+                        <MudTextField Label="Description" 
+                    @bind-Value="productModel.Description" For="@(() => productModel.Description)" Disabled="true" />
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+
+        </MudGrid>
+    </EditForm>
+    @code {
+        [Parameter]
+        public int id { get; set; }
+        ProductModel productModel = new ProductModel();
+        ResponseModel responseBookModel = new ResponseModel();
+        ResponseModel responseAuthorModel = new ResponseModel();
+
+        protected override async Task OnInitializedAsync()
+        {
+            responseBookModel = await ApiService.GetByProductId(id);
+            productModel = JsonConvert.DeserializeObject<ProductModel>(responseBookModel.ResData.ToString());
+
+        }
+
+        bool success;
+        IBrowserFile files;
+
+        private void OnValidSubmit(EditContext context)
+        {
+            success = true;
+            StateHasChanged();
+        }
+
+     
+        private void UploadFiles(IBrowserFile file)
+        {
+            files = file;
+
+            productModel.Image = files.Name;
+
+        }
+    }

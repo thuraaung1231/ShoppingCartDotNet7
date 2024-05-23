@@ -73,7 +73,7 @@ namespace ShoppingCartApi.Services.StudentServices
         public ResponseModel GetUserList()
         {
             ResponseModel responseModel=new ResponseModel();
-            var UserList=_applicationDbContext.User.Where(u=>u.Is_delete==false).ToList();
+            var UserList=_applicationDbContext.User.Where(u=>u.Is_delete==false && u.RoleId==2).ToList();
             if (UserList.Count > 0)
             {
                 responseModel.ResData = UserList;

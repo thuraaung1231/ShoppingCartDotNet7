@@ -21,6 +21,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartYTRAWPADotNet7/ShoppingCartDotNet7/ShoppingCartDotNet7/Components/HeaderComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIZWFkZXJDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartYTRAWPADotNet7/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/AdminDashboard.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5EYXNoYm9hcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -31,10 +35,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartYTRAWPADotNet7/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/Admin/EditAdmin.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRWRpdEFkbWluLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartYTRAWPADotNet7/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/Admin/ListAdmin.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTGlzdEFkbWluLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartYTRAWPADotNet7/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/Counter.razor]

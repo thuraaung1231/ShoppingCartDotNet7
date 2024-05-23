@@ -11,5 +11,11 @@ namespace ShoppingCartDotNet7.APIRoutes
 
         [Post("/User/GetUserByNameAndPassword")]
         Task<ResponseModel> GetUserByNameAndPassword(LoginModel loginModel);
+
+        [Post("/User/GetUserList")]
+        Task<ResponseModel> GetUserList();
+
+        [Post("/User/DeleteUser/{id}")]
+        Task<ResponseModel> DeleteUser(int id);
     }
 }

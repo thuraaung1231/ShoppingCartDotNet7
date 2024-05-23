@@ -92,3 +92,9 @@ D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotN
 D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\Refit.HttpClientFactory.dll
 D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\Newtonsoft.Json.dll
 D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\Refit.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\Refit.HttpClientFactory.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\ShoppingCartDTO.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartDotNet7\bin\Debug\net7.0\ShoppingCartDTO.pdb
