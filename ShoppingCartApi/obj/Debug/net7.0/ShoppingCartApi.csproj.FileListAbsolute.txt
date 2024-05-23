@@ -71,3 +71,10 @@ D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotN
 D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotNet7\ShoppingCartApi\obj\Debug\net7.0\ShoppingCartApi.pdb
 D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotNet7\ShoppingCartApi\obj\Debug\net7.0\ShoppingCartApi.genruntimeconfig.cache
 D:\AllC#\C#Exercises\GitCollabration\ShoppingCartYTRAWPADotNet7\ShoppingCartDotNet7\ShoppingCartApi\obj\Debug\net7.0\ref\ShoppingCartApi.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartApi\bin\Debug\net7.0\MySqlConnector.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartApi\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartApi\bin\Debug\net7.0\ShoppingCartDTO.dll
+C:\Users\User\source\repos\ShoppingCartDotNet7\ShoppingCartApi\bin\Debug\net7.0\ShoppingCartDTO.pdb

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj": {}
+    "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj": {}
   },
   "projects": {
-    "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj": {
+    "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj",
         "projectName": "ShoppingCartDotNet7",
-        "projectPath": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj",
-        "packagesPath": "C:\\Users\\itstu\\.nuget\\packages\\",
-        "outputPath": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\obj\\",
+        "projectPath": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\ShoppingCartDotNet7.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDotNet7\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\itstu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDTO\\ShoppingCartDTO.csproj": {
-                "projectPath": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDTO\\ShoppingCartDTO.csproj"
+              "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDTO\\ShoppingCartDTO.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDTO\\ShoppingCartDTO.csproj"
               }
             }
           }
@@ -88,24 +89,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDTO\\ShoppingCartDTO.csproj": {
+    "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDTO\\ShoppingCartDTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDTO\\ShoppingCartDTO.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDTO\\ShoppingCartDTO.csproj",
         "projectName": "ShoppingCartDTO",
-        "projectPath": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDTO\\ShoppingCartDTO.csproj",
-        "packagesPath": "C:\\Users\\itstu\\.nuget\\packages\\",
-        "outputPath": "D:\\AllC#\\C#Exercises\\GitCollabration\\ShoppingCartYTRAWPADotNet7\\ShoppingCartDotNet7\\ShoppingCartDTO\\obj\\",
+        "projectPath": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDTO\\ShoppingCartDTO.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\ShoppingCartDotNet7\\ShoppingCartDTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\itstu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -114,6 +115,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -147,7 +149,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

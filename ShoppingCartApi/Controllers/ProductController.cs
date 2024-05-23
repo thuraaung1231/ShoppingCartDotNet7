@@ -6,6 +6,8 @@ using ShoppingCartDTO.Product;
 
 namespace ShoppingCartApi.Controllers
 {
+    [ApiController]
+    [Route("WebAPI/[controller]")]
     public class ProductController : Controller
     {
         private readonly IProductService _productService;
@@ -15,7 +17,7 @@ namespace ShoppingCartApi.Controllers
             _productService = productService;
         }
         [HttpPost]
-        [Route("CreateProduct")]
+        [Route("AddProduct")]
         public Task<ResponseModel> CreateProduct(ProductModel productModel)
         {
             ResponseModel responseModel = new ResponseModel();
@@ -24,7 +26,7 @@ namespace ShoppingCartApi.Controllers
         }
 
         [HttpPost]
-        [Route("GetProductById/{id}")]
+        [Route("GetByProductId/{id}")]
         public Task<ResponseModel> GetProductById(int id)
         {
             ResponseModel responseModel = new ResponseModel();
@@ -33,7 +35,7 @@ namespace ShoppingCartApi.Controllers
         }
 
         [HttpGet]
-        [Route("GetProductList")]
+        [Route("ListProduct")]
         public Task<ResponseModel> GetProductList()
         {
             ResponseModel responseModel = new ResponseModel();
