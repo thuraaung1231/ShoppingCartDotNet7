@@ -61,8 +61,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartYTRAWPADotNet7/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/Product/CreateProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxDcmVhdGVQcm9kdWN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartYTRAWPADotNet7/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/Product/DetailProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxEZXRhaWxQcm9kdWN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartYTRAWPADotNet7/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/Product/EditProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxFZGl0UHJvZHVjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartYTRAWPADotNet7/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/Product/ListProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxMaXN0UHJvZHVjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartYTRAWPADotNet7/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/User/CreateUser.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxDcmVhdGVVc2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartYTRAWPADotNet7/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/User/EditForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxFZGl0Rm9ybS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/AllC\#/C\#Exercises/GitCollabration/ShoppingCartYTRAWPADotNet7/ShoppingCartDotNet7/ShoppingCartDotNet7/Pages/User/ListUser.razor]
