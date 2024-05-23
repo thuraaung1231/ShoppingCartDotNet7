@@ -43,6 +43,15 @@ namespace ShoppingCartApi.Controllers
             return Task.FromResult(responseModel);
         }
 
+        [HttpGet]
+        [Route("GetAdminList")]
+        public Task<ResponseModel> GetAdminList()
+        {
+            ResponseModel responseModel = new ResponseModel();
+            responseModel = _userService.GetAdminList();
+            return Task.FromResult(responseModel);
+        }
+
         [HttpPost]
         [Route("UpdateUser")]
         public Task<ResponseModel> UpdateUser(UserModel userModel)
