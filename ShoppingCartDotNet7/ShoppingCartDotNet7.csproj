@@ -7,25 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\Admin\ListAdmin.razor" />
-    <Content Remove="Pages\User\EditUser.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\User\EditUser.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\Admin\ListAdmin.razor" />
-    <_ContentIncludedByDefault Remove="Pages\User\EditUser.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Pages\Admin\ListAdmin.razor" />
-    <None Include="Pages\User\EditUser.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
 	  <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
 	  <PackageReference Include="MudBlazor" Version="6.19.1" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
@@ -41,10 +22,6 @@
     <Content Update="Pages\User\ListUser.razor">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\Admin\ListAdmin.razor" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿@page "/ListUser"
+﻿@page "/UserList"
 @using System.Net.Http.Json
 @inject HttpClient httpClient
 @using MudBlazor
@@ -21,14 +21,14 @@
         <PropertyColumn Property="x => x.Email" />
        
         <PropertyColumn Property="x => x.Address" />
-        <TemplateColumn Filterable="false" Title="Edit" Class="mx-auto bg-primary text-light">
+        <TemplateColumn Filterable="false" Title="Edit" Class="mx-auto">
             <CellTemplate Context="context">
                 <MudButton Variant="Variant.Filled" Color="Color.Tertiary" @onclick="(() => EditUser(context.Item.Id))">
                     <i class="fa-solid fa-pen-to-square me-1"></i>edit
                 </MudButton>
             </CellTemplate>
         </TemplateColumn>
-        <TemplateColumn Filterable="false" Title="Delete" Class="mx-auto bg-primary text-light">
+        <TemplateColumn Filterable="false" Title="Delete" Class="mx-auto">
             <CellTemplate Context="context">
                 <MudButton Variant="Variant.Filled" Color="Color.Error" @onclick="(()=>DeleteUser(context.Item.Id))" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash me-1"></i>delete</MudButton>
 
@@ -43,7 +43,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
@@ -54,7 +54,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" @onclick="()=>DeleteConfirm(userId)">Delete</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @onclick="()=>DeleteConfirm(userId)">Delete</button>
             </div>
         </div>
     </div>
@@ -139,10 +139,10 @@
         }
 
 
-        navigate.NavigateTo("ListUser");
+        navigate.NavigateTo("UserList");
     }
-    private void EditUser(int id)
+    private async void EditUser(int id)
     {
-        
+        navigate.NavigateTo($"EditUser/{id}");
     }
 }

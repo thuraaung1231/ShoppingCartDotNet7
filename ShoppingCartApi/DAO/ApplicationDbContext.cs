@@ -11,7 +11,7 @@ namespace ShoppingCartApi.DAO
         public DbSet<ProductModel> Product { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string con = ConstantUtilities.YtraconnectionString;
+            string con = ConstantUtilities.connectionString;
 
             optionsBuilder.UseMySql(con, ServerVersion.AutoDetect(con));
 

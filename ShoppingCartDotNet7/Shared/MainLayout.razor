@@ -11,14 +11,14 @@
 <MudSnackbarProvider />
 <div class="page">
 
-    @if (userModel != null && (userModel.RoleId == 0 || userModel.RoleId == 1))
+   @*  @if (userModel != null && (userModel.RoleId == 0 || userModel.RoleId == 1))
     {
         <div class="sidebar">
             <NavMenu />
         </div>
-    }
+    } *@
 
-    <main class="bg-secondary vh-100">
+    <main class="bg-secondary vh-auto">
         <MudLayout>
             @{
                 if (userModel.RoleId == 0)
@@ -27,7 +27,7 @@
                 }
                 else if(userModel.RoleId==1)
                 {
-                    <HeaderComponent ActionName1="@userModel.Name" ActionName2="Logout" Icon2="fa-solid fa-right-from-bracket"></HeaderComponent>
+                    <HeaderComponent ActionName1="UserList" Icon1="fa-solid fa-list" ActionName3="ProductList" Icon3="fa-solid fa-list" ActionName2="Logout" Icon2="fa-solid fa-right-from-bracket"></HeaderComponent>
                 }else if (userModel.RoleId == 2)
                 {
                      <HeaderComponent ActionName1="@userModel.Name" ActionName2="Logout" Icon2="fa-solid fa-right-from-bracket" ></HeaderComponent>

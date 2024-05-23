@@ -36,7 +36,7 @@ namespace ShoppingCartApi.Services.StudentServices
             if(User!= null)
             {
               User.Is_delete = true;
-                _applicationDbContext.User.Add(User);
+                _applicationDbContext.User.Update(User);
                int count= _applicationDbContext.SaveChanges();
                 if(count>0)
                 {
@@ -86,7 +86,21 @@ namespace ShoppingCartApi.Services.StudentServices
             return responseModel;
         }
 
-
+        public ResponseModel GetAdminList()
+        {
+            ResponseModel responseModel = new ResponseModel();
+            var UserList = _applicationDbContext.User.Where(u => u.Is_delete == false && u.RoleId == 1).ToList();
+            if (UserList.Count > 0)
+            {
+                responseModel.ResData = UserList;
+                responseModel.ResCode = "I001";
+            }
+            else
+            {
+                responseModel.ResCode = "I003";
+            }
+            return responseModel;
+        }
         public ResponseModel UpdateUser(UserModel userModel)
         {
             ResponseModel responseModel = new ResponseModel();
