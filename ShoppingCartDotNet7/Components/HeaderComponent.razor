@@ -1,0 +1,39 @@
+﻿@using MudBlazor
+@inject NavigationManager navigate
+<MudAppBar Elevation="4" Class="bg-primary">
+                <MudText Typo="Typo.h6" Color="Color.Warning" Class="ml-3">Shopping Cart <i class="fa-solid fa-basket-shopping"></i></MudText>
+
+                   <MudSpacer></MudSpacer>
+              
+                @* <MudTextField @bind-Value="searchString1" Class="mud-info" Variant="Variant.Outlined" Adornment="Adornment.End" AdornmentIcon="@Icons.ial.Filled.Search" AdornmentColor="Color.Secondary" /> *@
+                 <MudSpacer></MudSpacer>
+    <MudIconButton Variant="Variant.Filled" Color="@Color1" Class="me-3" @onclick="onClickAction2"><i class="@Icon3"></i> @ActionName3</MudIconButton>
+    <MudIconButton Variant="Variant.Filled" Color="Color.Warning" Class="me-3" @onclick="onClickAction1"><i class="@Icon1"></i> @ActionName1</MudIconButton>
+    <MudIconButton Variant="Variant.Filled" Color="Color.Warning" Edge="Edge.End" @onclick="onClickAction2"><i class="@Icon2"></i> @ActionName2</MudIconButton>
+</MudAppBar>
+
+@code {
+    [Parameter]
+    public string ActionName1 { get; set; }
+    [Parameter]
+    public string ActionName2 { get; set; }
+    [Parameter]
+    public string  Icon1 { get; set; }
+    [Parameter]
+    public string Icon2 { get; set; }
+    [Parameter]
+    public string ActionName3 { get; set; }
+    [Parameter]
+    public string Icon3 { get; set; }
+    [Parameter]
+    public Color Color1 { get; set; }
+
+    private async void onClickAction1()
+    {
+        navigate.NavigateTo(ActionName1);
+    }
+    private async void onClickAction2()
+    {
+        navigate.NavigateTo(ActionName2);
+    }
+}

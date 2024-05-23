@@ -1,15 +1,31 @@
 ﻿@page "/AdminDashboard"
 @using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 @using Microsoft.AspNetCore.Http
-@inject ProtectedSessionStorage protectedSessionStore
+@using Microsoft.AspNetCore.Authorization
+@using ShoppingCartDotNet7.Components
 
-<h3>Admin</h3>
-<h4>@userModel.Name</h4>
+@inject ProtectedSessionStorage protectedSessionStore
+<div>This is admin</div>
+
 @code {
-    UserModel userModel = new UserModel();
-    protected override async Task OnInitializedAsync()
+
+    UserModel userModel=new UserModel();
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        var result =await protectedSessionStore.GetAsync<UserModel>("UserRole");
-        userModel = result.Value;
+        if (firstRender)
+        {
+            var result = await protectedSessionStore.GetAsync<UserModel>("UserRole");
+            if (result.Success)
+            {
+                userModel = result.Value;            
+            }
+            else
+            {
+                // Handle error or redirect as needed
+            }
+            StateHasChanged(); // Re-render the component
+        }
     }
+    
 }
