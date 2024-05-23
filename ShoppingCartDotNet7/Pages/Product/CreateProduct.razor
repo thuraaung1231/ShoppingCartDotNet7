@@ -72,7 +72,7 @@
         productModel.CreatedAt = DateTime.Now;
         productModel.Is_delete = false;
         productModel.Image = files.Name;
-      responseProductModel= await ApiRoute.AddProduct(productModel);
+      responseProductModel= await ApiRoute.CreateProduct(productModel);
         if (responseProductModel.ResCode == "I001")
         {
             navigate.NavigateTo("ListProduct");

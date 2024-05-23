@@ -50,7 +50,7 @@
     {
         try
         {
-            responseProductModel = await ApiService.ProductList();
+            responseProductModel = await ApiService.GetProductList();
             //string JsonData = JsonConvert.SerializeObject(responseData.ResData);
             
             productModel = JsonConvert.DeserializeObject<List<ProductModel>>(responseProductModel.ResData.ToString());

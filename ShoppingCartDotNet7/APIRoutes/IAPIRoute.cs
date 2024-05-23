@@ -1,5 +1,6 @@
 ﻿using Refit;
 using ShoppingCartDTO;
+using ShoppingCartDTO.Product;
 using ShoppingCartDTO.User;
 
 namespace ShoppingCartDotNet7.APIRoutes
@@ -17,5 +18,20 @@ namespace ShoppingCartDotNet7.APIRoutes
 
         [Post("/User/DeleteUser/{id}")]
         Task<ResponseModel> DeleteUser(int id);
+
+
+        [Post("/Product/AddProduct")]
+        Task<ResponseModel> CreateProduct(ProductModel productModel);
+
+        [Post("/Product/ListProduct")]
+        Task<ResponseModel> GetProductList();
+
+        [Post("/Product/DeleteProduct/{id}")]
+        Task<ResponseModel> DeleteProduct(int id);
+        [Post("/Product/GetByProductId")]
+        Task<ResponseModel> GetByProductId(int id);
+        [Post("/Product/UpdateProduct")]
+        Task<ResponseModel> UpdateProduct(ProductModel productModel);
+
     }
 }
