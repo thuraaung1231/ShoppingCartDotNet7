@@ -1,5 +1,61 @@
-﻿<h3>CreateUser</h3>
+﻿@page "/CreateUser"
+@using System.ComponentModel.DataAnnotations
+@using MudBlazor
+@inject NavigationManager navigate
+@inject IAPIRoute ApiRoute
+<EditForm Model="@userModel" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+    <MudGrid Class="mt-5">
+        <MudItem xs="12" sm="6" Class="mx-auto">
+            <MudCard>
+                <MudCardContent>
+                    <MudText Align="Align.Center" Class="mb-n4 fs-4">Register Here!</MudText>
+                    <MudTextField Label="Name"
+                    @bind-Value="userModel.Name" For="@(() => userModel.Name)" />
+                    <MudTextField Label="Email" Class="mt-3"
+                    @bind-Value="userModel.Email" For="@(() => userModel.Email)" />
+                    <MudTextField Label="Address"
+                    @bind-Value="userModel.Address" For="@(() => userModel.Address)" />
+                    <MudTextField Label="Password" HelperText="Choose a strong password" Class="mt-3"
+                    @bind-Value="userModel.Password" For="@(() => userModel.Password)" InputType="InputType.Password" />
+                    <MudTextField Label="Confirm Password" HelperText="Repeat the password" Class="mt-3"
+                    @bind-Value="userModel.ConfirmPassword" For="@(() => userModel.ConfirmPassword)" InputType="InputType.Password" />
+                </MudCardContent>
+                <MudCardActions Class="d-flex justify-content-end">
+                    <MudButton ButtonType="ButtonType.Reset" Variant="Variant.Filled" Class="me-3">Cancel</MudButton>
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" @onclick="AdminRegister">Register</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+
+    </MudGrid>
+</EditForm>
+
 
 @code {
+    ResponseModel responseModel = new ResponseModel();
+    UserModel userModel = new UserModel();
+    bool success;
+    private void OnValidSubmit(EditContext context)
+    {
+        success = true;
+        StateHasChanged();
+    }
+    private async void AdminRegister()
+    {
+        userModel.CreatedAt = DateTime.Now;
+        userModel.Is_delete = false;
+        userModel.RoleId = Convert.ToInt32(UserRole.User);
+        responseModel = await ApiRoute.CreateUser(userModel);
+        if (responseModel.ResCode == "I001")
+        {
+            navigate.NavigateTo("Login");
 
+        }
+        else
+        {
+            navigate.NavigateTo("CreateUser");
+        }
+    }
 }
+

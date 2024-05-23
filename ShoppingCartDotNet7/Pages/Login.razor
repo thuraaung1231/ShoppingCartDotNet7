@@ -1,4 +1,4 @@
-﻿@page "/LoginUser"
+﻿@page "/Login"
 @using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 @using System.ComponentModel.DataAnnotations
 @using MudBlazor
@@ -6,8 +6,10 @@
 @inject NavigationManager navigate
 @inject IAPIRoute ApiRoute
 @inject ProtectedSessionStorage protectedSessionStore
+@using Microsoft.AspNetCore.Authentication
+@inject IHttpContextAccessor httpContext
 
-<EditForm Model="@loginModel" OnValidSubmit="OnValidSubmit">
+<EditForm Model="@loginModel" OnValidSubmit="OnValidSubmit" class="d-flex align-items-center vh-100">
     <DataAnnotationsValidator />
     <MudGrid>
         <MudItem xs="12" sm="5" Class="mx-auto">
@@ -47,15 +49,20 @@
     {
         responseModel = await ApiRoute.GetUserByNameAndPassword(loginModel);
 
+      
 
         if (responseModel.ResCode == "I001")
         {
             userModel = JsonConvert.DeserializeObject<UserModel>(responseModel.ResData.ToString());
             protectedSessionStore.SetAsync("UserRole", userModel);
+            
 
             if (userModel.RoleId == 0 || userModel.RoleId==1)
             {
+                
                 navigate.NavigateTo("AdminDashboard");
+                
+                StateHasChanged();
             }
             else
             {
