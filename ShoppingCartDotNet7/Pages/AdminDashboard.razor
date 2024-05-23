@@ -3,13 +3,37 @@
 @using Microsoft.AspNetCore.Http
 @using Microsoft.AspNetCore.Authorization
 @using ShoppingCartDotNet7.Components
+@using Newtonsoft.Json
+@inject IAPIRoute ApiService
 
 @inject ProtectedSessionStorage protectedSessionStore
-<div>This is admin</div>
+@foreach (var item in userModel)
+{
+    
+}
 
 @code {
 
-    UserModel userModel=new UserModel();
+    List<UserModel> userModel = new List<UserModel>();
+    ResponseModel responseModel = new ResponseModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            responseModel = await ApiService.GetProductList();
+         
+            //string JsonData = JsonConvert.SerializeObject(responseData.ResData);
+            userModel = JsonConvert.DeserializeObject<List<UserModel>>(responseModel.ResData.ToString());
+
+        }
+        catch (Exception ex)
+        {
+            // Handle the exception, log it, or show an error message
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+
+    }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
