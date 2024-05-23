@@ -8,7 +8,7 @@ namespace ShoppingCartDTO
 {
     public class ResponseModel
     {
-        public object ResData { get; set; }
+        public Object? ResData { get; set; }
         public string ResCode { get; set; }
     }
 }

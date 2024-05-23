@@ -1,37 +1,73 @@
-﻿@page "/Home"
+﻿@page "/"
 @using MudBlazor
+@inject NavigationManager navigate
+
+@inject IAPIRoute ApiService;
+@using ShoppingCartDTO.Product
+@using Newtonsoft.Json
 
 
 <div class="row mt-5">
-    @for (int i = 0; i < 10; i++)
+    @foreach (var item in productModel)
     {
         <div class="col-3 mb-5">
             <MudCard>
                 <MudCardContent>
-                    <MudText Class="fs-5 fw-bold">Product Name</MudText>
+                    <MudText Class="fs-5 fw-bold">@item.Name</MudText>
                     <div class="d-flex justify-content-center align-items-center">
-                        <MudImage Src="Boy1.jpg" Width="200" Height="150"  />
+
+                        <MudImage Src="@($"/Images/{item.Image}")" Width="200" Height="150" />
                     </div>
 
                     <MudText Class="d-inline">Prices:</MudText>
-                    <MudText Class="d-inline float-end">10000</MudText>
-                    <br>                 
-                     <MudText Class="d-inline">Quantity:</MudText>
-                    <MudText Class="d-inline float-end">1</MudText>
-                    
+                    <MudText Class="d-inline float-end">@item.Price</MudText>
+                    <br>
+                    <MudText Class="d-inline">Total Item:</MudText>
+                    <MudText Class="d-inline float-end">@item.TotalItem</MudText>
+                    <br>
+                    <MudText Class="d-inline">Description:</MudText>
+                    <MudText Class="d-inline float-end">@item.Description</MudText>
+                    <br>
 
                 </MudCardContent>
                 <MudCardActions>
-                    <MudButton Variant="Variant.Outlined" Color="Color.Primary" Class="ms-auto">buy</MudButton>
+                    <MudButton Variant="Variant.Outlined" Color="Color.Primary" Class="ms-auto" @onclick="(()=>BuyProduct(item.Code))">buy</MudButton>
                 </MudCardActions>
             </MudCard>
         </div>
-    }     
+    }
+        
 
 </div>
 
 
 
 @code {
+    List<ProductModel> productModel = new List<ProductModel>();
+    ResponseModel responseProductModel = new ResponseModel();
+   
+       protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            responseProductModel = await ApiService.ProductList();
+            //string JsonData = JsonConvert.SerializeObject(responseData.ResData);
+            
+            productModel = JsonConvert.DeserializeObject<List<ProductModel>>(responseProductModel.ResData.ToString());
 
+
+        }
+        catch (Exception ex)
+        {
+            // Handle the exception, log it, or show an error message
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+
+    }
+    private void BuyProduct(int id)
+    {
+        navigate.NavigateTo($"DetailProduct/{id}");
+    }
 }
+
+

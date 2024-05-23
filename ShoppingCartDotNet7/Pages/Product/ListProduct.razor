@@ -1,0 +1,157 @@
+﻿@page "/ListProduct"
+@using MudBlazor
+@inject NavigationManager navigate
+
+@inject IAPIRoute ApiService;
+@using ShoppingCartDTO.Product
+@using Newtonsoft.Json
+
+
+
+
+<MudDataGrid T="ProductModel" MultiSelection="true" Class="col-12 overflow-x-scroll" FixedHeader=true Height="100vh" Items="@Elements" SortMode="SortMode.Multiple" Filterable="true" QuickFilter="@_quickFilter"
+             Hideable="true" RowClick="@RowClicked" RowContextMenuClick="RowRightClicked" SelectedItemsChanged="@SelectedItemsChanged">
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">Product List</MudText>
+        <MudSpacer />
+        <MudTextField @bind-Value="_searchString" Placeholder="Search" Adornment="Adornment.Start" Immediate="true"
+                      AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+    </ToolBarContent>
+    <Columns>
+
+        <PropertyColumn Property="x => x.Code" Class="bg-primary text-light" Title="Nr" Sortable="false" Filterable="false" />
+        <PropertyColumn Property="x => x.Image" Class="bg-primary text-light " />
+        <PropertyColumn Property="x => x.Name" Class="bg-primary text-light" SortBy="@_sortBy" />
+        <PropertyColumn Property="x => x.Description" Class="bg-primary text-light " />
+        <PropertyColumn Property="x => x.Price" Class="bg-primary text-light " />    
+        <PropertyColumn Property="x => x.TotalItem" Class="bg-primary text-light " />
+       
+        <TemplateColumn Filterable="false" Title="Cover Photo" Class="bg-primary text-light">
+            <CellTemplate Context="context">
+                @{
+                    var coverPhotoUrl = "/Images/" + context.Item.Image;
+                }
+                <MudImage Src="@coverPhotoUrl" Class="w-50"/>
+            </CellTemplate>
+        </TemplateColumn>
+        <TemplateColumn Filterable="false" Title="Edit" Class="mx-auto bg-primary text-light">
+            <CellTemplate Context="context">
+                <MudButton Variant="Variant.Filled" Color="Color.Tertiary" @onclick="(() => EditProduct(context.Item.Code))">
+                    <i class="fa-solid fa-pen-to-square me-1"></i>edit
+                </MudButton>
+            </CellTemplate>
+        </TemplateColumn>
+        <TemplateColumn Filterable="false" Title="Delete" Class="mx-auto bg-primary text-light">
+            <CellTemplate Context="context">
+                <MudButton Variant="Variant.Filled" Color="Color.Error" @onclick="(()=>DeleteProduct(context.Item.Code))" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash me-1"></i>delete</MudButton>
+
+            </CellTemplate>
+        </TemplateColumn>
+    </Columns>
+    <PagerContent>
+        <MudDataGridPager T="ProductModel" />
+    </PagerContent>
+</MudDataGrid>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Product</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are You Sure To Delete?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @onclick="()=>DeleteConfirm(bookId)">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@code {
+    List<ProductModel> Elements = new List<ProductModel>();
+    ResponseModel responseData = new ResponseModel();
+    private string _searchString;
+    private bool _sortNameByLength;
+    int bookId;
+    private List<string> _events = new();
+    // custom sort by name length
+    private Func<ProductModel, object> _sortBy => x =>
+    {
+        if (_sortNameByLength)
+            return x.Name.Length;
+        else
+            return x.Name;
+
+    };
+    // quick filter - filter globally across multiple columns with the same input
+    private Func<ProductModel, bool> _quickFilter => x =>
+    {
+        if (string.IsNullOrWhiteSpace(_searchString))
+            return true;
+
+        if (x.Name.Contains(_searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+
+        return false;
+    };
+    private void EditProduct(int id)
+    {
+        navigate.NavigateTo($"EditProduct/{id}");
+    }
+    private async Task DeleteConfirm(int id)
+    {
+
+        responseData = await ApiService.DeleteProduct(id);
+        if (responseData.ResCode=="I001")
+        {
+           // navigate.NavigateTo("ListProduct");
+           navigate.NavigateTo(navigate.Uri, forceLoad: true);
+        }
+
+
+            navigate.NavigateTo("ListProduct");
+        
+    }
+    private void DeleteProduct(int id)
+    {
+        bookId = id;
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            responseData = await ApiService.ProductList();
+             //string JsonData = JsonConvert.SerializeObject(responseData.ResData);
+            Elements = JsonConvert.DeserializeObject<List<ProductModel>>(responseData.ResData.ToString());
+
+        }
+        catch (Exception ex)
+        {
+            // Handle the exception, log it, or show an error message
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+        
+    }
+
+    // events
+    void RowClicked(DataGridRowClickEventArgs<ProductModel> args)
+    {
+        _events.Insert(0, $"Event = RowClick, Index = {args.RowIndex}, Data = {System.Text.Json.JsonSerializer.Serialize(args.Item)}");
+    }
+
+    void RowRightClicked(DataGridRowClickEventArgs<ProductModel> args)
+    {
+        _events.Insert(0, $"Event = RowRightClick, Index = {args.RowIndex}, Data = {System.Text.Json.JsonSerializer.Serialize(args.Item)}");
+    }
+
+    void SelectedItemsChanged(HashSet<ProductModel> items)
+    {
+        _events.Insert(0, $"Event = SelectedItemsChanged, Data = {System.Text.Json.JsonSerializer.Serialize(items)}");
+    }
+}
